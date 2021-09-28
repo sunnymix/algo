@@ -1,2 +1,3 @@
-# algo
-algo training
+# Algo
+
+Algorithm training.
