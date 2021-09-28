@@ -1,4 +1,4 @@
-package w01.c01array;
+package w01.c0101array;
 
 /**
  * leetcode: https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/

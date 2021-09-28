@@ -1,7 +1,8 @@
 package common;
 
-public class Print {
+import common.list.ListNode;
 
+public class Print {
     public static void arr(int[] arr) {
         StringBuilder res = new StringBuilder();
         res.append("[");
@@ -15,4 +16,13 @@ public class Print {
         System.out.println(res);
     }
 
+    public static void list(ListNode head) {
+        StringBuilder res = new StringBuilder();
+        while (head != null) {
+            res.append(head.val).append("->");
+            head = head.next;
+        }
+        res.append("null");
+        System.out.println(res);
+    }
 }
