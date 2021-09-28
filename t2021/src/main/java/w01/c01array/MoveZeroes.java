@@ -1,16 +1,14 @@
 package w01.c01array;
 
+import common.Print;
+
 /**
  * leetcode: https://leetcode-cn.com/problems/move-zeroes/
  */
 public class MoveZeroes {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{0, 1, 0, 3, 12};
-        Solution01.moveZeroes(nums);
-        for (int num : nums) {
-            System.out.printf("%d ", num);
-        }
+        Solution01.moveZeroes(new int[]{0, 1, 0, 3, 12});
     }
 
     public static class Solution01 {
@@ -26,6 +24,7 @@ public class MoveZeroes {
                 nums[n] = 0;
                 n++;
             }
+            Print.arr(nums);
         }
     }
 

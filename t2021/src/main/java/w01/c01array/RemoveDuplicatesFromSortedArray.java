@@ -6,9 +6,7 @@ package w01.c01array;
 public class RemoveDuplicatesFromSortedArray {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 2, 3, 4, 4, 5};
-        int result = Solution01.removeDuplicates(nums);
-        System.out.printf("Result is: %s", result);
+        System.out.println(Solution01.removeDuplicates(new int[]{1, 2, 2, 3, 4, 4, 5}));
     }
 
     public static class Solution01 {
