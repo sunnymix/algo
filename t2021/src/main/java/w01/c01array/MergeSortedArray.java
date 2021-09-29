@@ -33,7 +33,7 @@ public class MergeSortedArray {
             for (int x = 0; x < m + n; x++) {
                 nums1[x] = results[x];
             }
-            Print.arr(results);
+            Print.array(results);
         }
     }
 
@@ -54,7 +54,7 @@ public class MergeSortedArray {
                     j--;
                 }
             }
-            Print.arr(nums1);
+            Print.array(nums1);
         }
     }
 

@@ -24,7 +24,7 @@ public class MoveZeroes {
                 nums[n] = 0;
                 n++;
             }
-            Print.arr(nums);
+            Print.array(nums);
         }
     }
 

@@ -2,8 +2,10 @@ package common;
 
 import common.list.ListNode;
 
+import java.util.Stack;
+
 public class Print {
-    public static void arr(int[] arr) {
+    public static void array(int[] arr) {
         StringBuilder res = new StringBuilder();
         res.append("[");
         for (int i = 0; i < arr.length; i++) {
@@ -24,5 +26,9 @@ public class Print {
         }
         res.append("null");
         System.out.println(res);
+    }
+
+    public static void stack(Stack<Character> stk) {
+        System.out.println(stk);
     }
 }
