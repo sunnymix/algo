@@ -13,7 +13,7 @@ public class MergeSortedArray {
     }
 
     /**
-     * 正着合并，从小到大，额外的数组存放结果。
+     * 正着合并，从小到大，额外的数组存放结果
      */
     public static class Solution01 {
         public static void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -38,14 +38,14 @@ public class MergeSortedArray {
     }
 
     /**
-     * 倒着合并，从大到小，在nums1中存放结果。
+     * 倒着合并，从大到小，在nums1中存放结果
      */
     public static class Solution02 {
         public static void merge(int[] nums1, int m, int[] nums2, int n) {
             int i = m - 1;
             int j = n - 1;
             for (int k = m + n - 1; k >= 0; k--) {
-                // 什么时候要nums1[i]？或者j出界；或者i,j都没有出界，要大的。
+                // 什么时候要nums1[i]？或者j出界；或者i,j都没有出界，要大的
                 if (j < 0 || (i >= 0 && nums1[i] >= nums2[j])) {
                     nums1[k] = nums1[i];
                     i--;
