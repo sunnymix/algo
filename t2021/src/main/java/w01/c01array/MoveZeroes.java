@@ -1,4 +1,4 @@
-package w01.c0101array;
+package w01.c01array;
 
 import common.Print;
 

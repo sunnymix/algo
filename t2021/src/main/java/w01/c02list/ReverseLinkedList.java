@@ -1,4 +1,4 @@
-package w01.c0102list;
+package w01.c02list;
 
 import common.Print;
 import common.list.ListNode;
