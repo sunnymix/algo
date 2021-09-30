@@ -4,6 +4,7 @@
 2. #155 最小栈 min-stack
 3. #150 后缀表达式求值/逆波兰表达式求值 evaluate-reverse-polish-notation
 4. #224 中缀表达式求值/简单计算器 basic-calculator
+5. #84 柱状图中最大的矩形 largest-rectangle-in-histogram
 
 ## 解题思想
 
