@@ -1,7 +1,7 @@
 package w01.c02list;
 
 import common.Print;
-import common.list.ListNode;
+import common.model.ListNode;
 
 /**
  * leetcode: https://leetcode-cn.com/problems/reverse-nodes-in-k-group/

@@ -1,4 +1,4 @@
-package common.list;
+package common.model;
 
 public class ListNode {
     public int val;

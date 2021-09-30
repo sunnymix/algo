@@ -1,11 +1,13 @@
 package w01.c03stack;
 
+import common.model.Rect;
+
 import java.util.Stack;
 
 /**
  * leetcode: https://leetcode-cn.com/problems/trapping-rain-water/
  */
-public class TrappingRainWater {
+public class TrappingRainWater01 {
     public static void main(String[] args) {
         System.out.println(trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
         System.out.println(trap(new int[]{4, 2, 0, 3, 2, 5}));
@@ -27,15 +29,5 @@ public class TrappingRainWater {
             stk.push(new Rect(extendWidth + 1, height));
         }
         return res;
-    }
-
-    private static class Rect {
-        int width;
-        int height;
-
-        public Rect(int width, int height) {
-            this.width = width;
-            this.height = height;
-        }
     }
 }

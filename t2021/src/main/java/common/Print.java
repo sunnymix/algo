@@ -1,6 +1,6 @@
 package common;
 
-import common.list.ListNode;
+import common.model.ListNode;
 
 import java.util.Stack;
 

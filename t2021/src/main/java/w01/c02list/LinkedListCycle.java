@@ -1,6 +1,6 @@
 package w01.c02list;
 
-import common.list.ListNode;
+import common.model.ListNode;
 
 /**
  * leetcode: https://leetcode-cn.com/problems/linked-list-cycle/
