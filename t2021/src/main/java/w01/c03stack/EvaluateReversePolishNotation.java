@@ -28,7 +28,7 @@ public class EvaluateReversePolishNotation {
             return stk.peek();
         }
 
-        public static int calc(int x, int y, String op) {
+        private static int calc(int x, int y, String op) {
             if (op.equals("+")) {
                 return x + y;
             } else if (op.equals("-")) {
