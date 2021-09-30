@@ -3,7 +3,10 @@ package w01.c02list;
 import common.Print;
 import common.list.ListNode;
 
-public class ReverseKGroup {
+/**
+ * leetcode: https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
+ */
+public class ReverseNodesInKGroup {
     public static void main(String[] args) {
         ListNode list = ListNode.of(new int[]{1, 2, 3, 4, 5, 6});
         Print.list(list);
