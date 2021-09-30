@@ -25,9 +25,7 @@ public class LargestRectangleInHistogram {
      * @return 最大面积
      */
     public static int largestRectangleArea(int[] heights) {
-        int len = heights.length;
-        heights = Arrays.copyOf(heights, len + 1);
-        heights[len] = 0;
+        heights = pushZero(heights);
         Stack<Rect> rects = new Stack<>();
         int res = 0;
         for (int height : heights) {
@@ -43,6 +41,12 @@ public class LargestRectangleInHistogram {
             rects.push(new Rect(extendWidth + 1, height));
         }
         return res;
+    }
+
+    private static int[] pushZero(int[] heights) {
+        int[] hs = Arrays.copyOf(heights, heights.length + 1);
+        hs[hs.length - 1] = 0;
+        return hs;
     }
 
     private static class Rect {
