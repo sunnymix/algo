@@ -26,19 +26,19 @@ public class LargestRectangleInHistogram {
      */
     public static int largestRectangleArea(int[] heights) {
         heights = pushZero(heights);
-        Stack<Rect> rects = new Stack<>();
+        Stack<Rect> stk = new Stack<>();
         int res = 0;
         for (int height : heights) {
             int extendWidth = 0;
             // 1. 操作栈顶，满足单调性
-            while (!rects.isEmpty() && height < rects.peek().height) {
+            while (!stk.isEmpty() && stk.peek().height >= height) {
                 // 破坏了单调性，确定了栈顶高度的扩展范围，需要删除栈顶
-                extendWidth += rects.peek().width;
-                res = Math.max(res, rects.peek().height * extendWidth);
-                rects.pop();
+                extendWidth += stk.peek().width;
+                res = Math.max(res, stk.peek().height * extendWidth);
+                stk.pop();
             }
             // 2. 入栈，只贡献宽度，不贡献高度（因为单调递增，当前柱子的高度是最高的）
-            rects.push(new Rect(extendWidth + 1, height));
+            stk.push(new Rect(extendWidth + 1, height));
         }
         return res;
     }
