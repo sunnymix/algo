@@ -3,6 +3,7 @@
 1. #206 反转链表 reverse-linked-list
 2. #25 K个一组反转链表 reverse-k-group
 3. #141 环形链表 linked-list-cycle
+4. #21 合并两个有序链表 merge-two-sorted-lists
 
 ## 解题思想
 

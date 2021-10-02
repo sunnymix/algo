@@ -17,16 +17,12 @@ public class ListNode {
     }
 
     public static ListNode of(int[] arr) {
-        ListNode head = null;
-        ListNode last = null;
-        for (int i = 0; i < arr.length; i++) {
-            ListNode cur = new ListNode(arr[i]);
-            if (i == 0) {
-                head = last = cur;
-            }
-            last.next = cur;
-            last = cur;
+        ListNode protect = new ListNode(0, null);
+        ListNode head = protect;
+        for (int i : arr) {
+            head.next = new ListNode(i, null);
+            head = head.next;
         }
-        return head;
+        return protect.next;
     }
 }
