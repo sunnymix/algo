@@ -3,6 +3,7 @@
 1. #26 删除有序数组中的重复项 remove-duplicates-from-sorted-array
 2. #283 移动零 move-zeroes
 3. #88 合并两个有序数组 merge-sorted-array
+4. #66 加一 plus-one
 
 ## 解题思想
 
