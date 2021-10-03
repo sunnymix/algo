@@ -1,5 +1,7 @@
 package w01.c03stack;
 
+import common.model.Rect;
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -47,15 +49,5 @@ public class LargestRectangleInHistogram {
         int[] hs = Arrays.copyOf(heights, heights.length + 1);
         hs[hs.length - 1] = 0;
         return hs;
-    }
-
-    private static class Rect {
-        int width;
-        int height;
-
-        public Rect(int width, int height) {
-            this.width = width;
-            this.height = height;
-        }
     }
 }
