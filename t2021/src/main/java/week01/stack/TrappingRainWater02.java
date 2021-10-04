@@ -1,4 +1,4 @@
-package w01.c03stack;
+package week01.stack;
 
 /**
  * leetcode: https://leetcode-cn.com/problems/trapping-rain-water/

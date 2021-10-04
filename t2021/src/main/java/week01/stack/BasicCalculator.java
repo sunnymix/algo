@@ -1,4 +1,4 @@
-package w01.c03stack;
+package week01.stack;
 
 import java.util.ArrayList;
 import java.util.Stack;

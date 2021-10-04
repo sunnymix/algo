@@ -1,4 +1,4 @@
-package w01.c04queue;
+package week01.queue;
 
 import common.Print;
 

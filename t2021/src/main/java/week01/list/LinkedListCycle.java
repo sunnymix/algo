@@ -1,4 +1,4 @@
-package w01.c02list;
+package week01.list;
 
 import common.model.ListNode;
 
