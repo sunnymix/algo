@@ -3,43 +3,43 @@ package w01.c04queue;
 import common.Print;
 
 /**
- * leetcode: https://leetcode-cn.com/problems/design-circular-deque/
+ * leetcode: https://leetcode-cn.com/problems/design-circular-queue/
  */
-public class MyCircularDeque {
+public class MyCircularQueue {
     public static void main(String[] args) {
-        MyCircularDeque q = new MyCircularDeque(3);
-        Print.line(q.insertFront(1));
-        Print.line(q.insertLast(1));
-        Print.line(q.insertLast(2));
-        Print.line(q.insertFront(3));
-        Print.line(q.insertFront(4));
-        Print.line(q.getRear());
+        MyCircularQueue q = new MyCircularQueue(3);
+        Print.line(q.enQueue(1));
+        Print.line(q.enQueue(2));
+        Print.line(q.enQueue(3));
+        Print.line(q.enQueue(4));
+        Print.line(q.Rear());
         Print.line(q.isFull());
-        Print.line(q.deleteLast());
-        Print.line(q.insertFront(4));
-        Print.line(q.getFront());
+        Print.line(q.deQueue());
+        Print.line(q.enQueue(4));
+        Print.line(q.Rear());
+        Print.line(q.Front());
         Print.line(q.toString());
     }
 
     /**
      * 存储元素的数组
      */
-    int[] a;
+    private final int[] a;
 
     /**
      * 队列的容量
      */
-    int capacity;
+    private int capacity;
 
     /**
      * 队头：指向第1个元素
      */
-    int front;
+    private int front;
 
     /**
      * 队尾：指向末尾元素的下个位置
      */
-    int rear;
+    private int rear;
 
     private int _getPreIndex(int i) {
         return (i - 1 + a.length) % a.length;
@@ -69,24 +69,13 @@ public class MyCircularDeque {
         return s.toString();
     }
 
-    public MyCircularDeque(int k) {
-        capacity = k;
-        // 留出1个单位作为队尾位置，用于区分队列为空与队列已满的判断条件
+    public MyCircularQueue(int k) {
         a = new int[k + 1];
-        // 初始情况，队头等于队尾
+        capacity = k;
         front = rear = 0;
     }
 
-    public boolean insertFront(int value) {
-        if (isFull()) {
-            return false;
-        }
-        front = _getPreIndex(front);
-        a[front] = value;
-        return true;
-    }
-
-    public boolean insertLast(int value) {
+    public boolean enQueue(int value) {
         if (isFull()) {
             return false;
         }
@@ -95,7 +84,7 @@ public class MyCircularDeque {
         return true;
     }
 
-    public boolean deleteFront() {
+    public boolean deQueue() {
         if (isEmpty()) {
             return false;
         }
@@ -103,22 +92,14 @@ public class MyCircularDeque {
         return true;
     }
 
-    public boolean deleteLast() {
-        if (isEmpty()) {
-            return false;
-        }
-        rear = _getPreIndex(rear);
-        return true;
-    }
-
-    public int getFront() {
+    public int Front() {
         if (isEmpty()) {
             return -1;
         }
         return a[front];
     }
 
-    public int getRear() {
+    public int Rear() {
         if (isEmpty()) {
             return -1;
         }
@@ -130,6 +111,6 @@ public class MyCircularDeque {
     }
 
     public boolean isFull() {
-        return (rear + 1) % a.length == front;
+        return ((rear + 1) % a.length) == front;
     }
 }
