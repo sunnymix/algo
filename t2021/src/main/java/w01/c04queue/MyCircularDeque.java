@@ -18,7 +18,7 @@ public class MyCircularDeque {
         Print.line(q.deleteLast());
         Print.line(q.insertFront(4));
         Print.line(q.getFront());
-        q.print();
+        Print.line(q.toString());
     }
 
     /**
@@ -49,7 +49,8 @@ public class MyCircularDeque {
         return (i + 1) % a.length;
     }
 
-    public void print() {
+    @Override
+    public String toString() {
         StringBuilder s = new StringBuilder();
         s.append("[");
         if (!isEmpty()) {
@@ -65,7 +66,7 @@ public class MyCircularDeque {
             }
         }
         s.append("]");
-        System.out.println(s);
+        return s.toString();
     }
 
     public MyCircularDeque(int k) {
