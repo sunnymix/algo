@@ -3,6 +3,9 @@ package w01.c02list;
 import common.Print;
 import common.model.ListNode;
 
+/**
+ * leetcode: https://leetcode-cn.com/problems/merge-two-sorted-lists/
+ */
 public class MergeTwoSortedLists {
     public static void main(String[] args) {
         Print.list(mergeTwoList(ListNode.of(new int[]{1, 2, 4}), ListNode.of(new int[]{1, 3, 4})));

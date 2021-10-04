@@ -1,19 +1,21 @@
 package w01.c03stack;
 
+import common.Print;
+
 /**
  * leetcode: https://leetcode-cn.com/problems/maximal-rectangle/
  */
 public class MaximalRectangle {
     public static void main(String[] args) {
-        System.out.println(maximalRectangle(new char[][]{}));
-        System.out.println(maximalRectangle(new char[][]{{'0'}}));
-        System.out.println(maximalRectangle(new char[][]{{'1'}}));
-        System.out.println(maximalRectangle(new char[][]{{'0', '0'}}));
-        System.out.println(maximalRectangle(new char[][]{
+        Print.line(maximalRectangle(new char[][]{}));
+        Print.line(maximalRectangle(new char[][]{{'0'}}));
+        Print.line(maximalRectangle(new char[][]{{'1'}}));
+        Print.line(maximalRectangle(new char[][]{{'0', '0'}}));
+        Print.line(maximalRectangle(new char[][]{
                 {'0', '1'},
                 {'1', '0'}
         }));
-        System.out.println(maximalRectangle(new char[][]{
+        Print.line(maximalRectangle(new char[][]{
                 {'1', '0', '1', '0', '0'},
                 {'1', '0', '1', '1', '1'},
                 {'1', '1', '1', '1', '1'},

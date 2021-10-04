@@ -5,6 +5,10 @@ import common.model.ListNode;
 import java.util.Stack;
 
 public class Print {
+    public static void line(Object o) {
+        System.out.println(o);
+    }
+
     public static void array(int[] arr) {
         StringBuilder res = new StringBuilder();
         res.append("[");

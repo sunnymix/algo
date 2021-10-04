@@ -8,17 +8,17 @@ import common.Print;
 public class MyCircularDeque {
     public static void main(String[] args) {
         MyCircularDeque q = new MyCircularDeque(3);
-        System.out.println(q.insertLast(1));
-        System.out.println(q.insertLast(2));
-        System.out.println(q.insertFront(3));
-        System.out.println(q.insertFront(4));
-        System.out.println(q.getRear());
-        System.out.println(q.isFull());
-        System.out.println(q.deleteLast());
-        System.out.println(q.insertFront(4));
-        System.out.println(q.getFront());
+        Print.line(q.insertFront(1));
+        Print.line(q.insertLast(1));
+        Print.line(q.insertLast(2));
+        Print.line(q.insertFront(3));
+        Print.line(q.insertFront(4));
+        Print.line(q.getRear());
+        Print.line(q.isFull());
+        Print.line(q.deleteLast());
+        Print.line(q.insertFront(4));
+        Print.line(q.getFront());
         q.print();
-        Print.array(q.a);
     }
 
     /**
@@ -58,6 +58,10 @@ public class MyCircularDeque {
                 s.append(a[head]);
                 s.append(",");
                 head = _getNextIndex(head);
+            }
+            // 删除末尾多余的逗号（,）
+            if (s.length() > 0) {
+                s.deleteCharAt(s.length() - 1);
             }
         }
         s.append("]");
