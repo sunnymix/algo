@@ -1,4 +1,4 @@
-package week01.list;
+package week01.linked_list;
 
 import common.Print;
 import common.model.ListNode;
