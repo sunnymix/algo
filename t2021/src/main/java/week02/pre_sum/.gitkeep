@@ -1,0 +1,6 @@
+思想：
+取空间与时间的均衡，统计公式 Sum(left, right) = Sum(right) - Sum(left - 1)。
+当 Array 中都是非负数时，前缀和数组 Sum 单调递增。
+
+题目：
+1. 统计优美子数组 count-number-of-nice-subarrays。
