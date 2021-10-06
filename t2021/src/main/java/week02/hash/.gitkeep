@@ -1,0 +1,7 @@
+哈希思想的数据结构（Hash Function + Linked List）：
+- 哈希表（HashTable）
+- 无序集合（Set）
+- 无序映射（Map）
+
+题目：
+- #1 两数之和（TwoSum）：https://leetcode-cn.com/problems/two-sum/
