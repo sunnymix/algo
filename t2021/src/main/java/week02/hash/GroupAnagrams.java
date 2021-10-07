@@ -4,6 +4,9 @@ import common.Print;
 
 import java.util.*;
 
+/**
+ * #49 字母异位词分组（GroupAnagrams）：https://leetcode-cn.com/problems/group-anagrams/
+ */
 public class GroupAnagrams {
     public static void main(String[] args) {
         Print.list(groupAnagrams(new String[]{"a"}));
