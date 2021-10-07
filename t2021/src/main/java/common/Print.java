@@ -12,14 +12,14 @@ public class Print {
 
     public static void array(int[] arr) {
         StringBuilder res = new StringBuilder();
-        res.append("{");
+        res.append("[");
         for (int i = 0; i < arr.length; i++) {
             if (i > 0) {
                 res.append(",");
             }
             res.append(arr[i]);
         }
-        res.append("}");
+        res.append("]");
         System.out.println(res);
     }
 
@@ -35,14 +35,14 @@ public class Print {
 
     public static void list(List<List<String>> nestStrs) {
         StringBuilder res = new StringBuilder();
-        res.append("{");
+        res.append("[");
         for (List<String> strs : nestStrs) {
             res.append(strs.toString()).append(",");
         }
         if (res.length() > 1) {
             res.delete(res.length() - 1, res.length());
         }
-        res.append("}");
+        res.append("]");
         System.out.println(res);
     }
 

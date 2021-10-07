@@ -6,11 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * #1 两数之和（TwoSum）：https://leetcode-cn.com/problems/two-sum/
- *
+ * leetcode: https://leetcode-cn.com/problems/two-sum/
+ * <p>
  * 思路：
  * 两数之和为 target，枚举 i，在 i 之前的集合中找 j = target - i。
  * <p>
+ * 例子：
  * target: 6
  * nums: { 3, 2, 4 }
  * map: { 3: 0, 2: 1, 4: 2 }

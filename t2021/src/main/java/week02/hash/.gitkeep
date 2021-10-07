@@ -1,8 +1,9 @@
-哈希思想的数据结构（Hash Function + Linked List）：
+哈希数据结构和算法（Hash Function + Linked List）：
 - 哈希表（HashTable）
 - 无序集合（Set）
 - 无序映射（Map）
 
 题目：
-- #1 两数之和（TwoSum）：https://leetcode-cn.com/problems/two-sum/
-- #49 字母异位词分组（GroupAnagrams）：https://leetcode-cn.com/problems/group-anagrams/
+- #1 两数之和（TwoSum）
+- #49 字母异位词分组（GroupAnagrams）
+- #30 串联所有单词的子串（SubstringWithConcatenationOfAllWords）

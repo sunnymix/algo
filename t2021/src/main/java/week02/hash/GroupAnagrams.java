@@ -5,7 +5,10 @@ import common.Print;
 import java.util.*;
 
 /**
- * #49 字母异位词分组（GroupAnagrams）：https://leetcode-cn.com/problems/group-anagrams/
+ * leetcode: https://leetcode-cn.com/problems/group-anagrams/
+ * <p>
+ * 思路：
+ * 核心思想，特征哈希算法。
  */
 public class GroupAnagrams {
     public static void main(String[] args) {
