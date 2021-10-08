@@ -4,6 +4,7 @@
 - 无序映射（Map）
 
 题目：
-- #1 两数之和（TwoSum）
-- #49 字母异位词分组（GroupAnagrams）
-- #30 串联所有单词的子串（SubstringWithConcatenationOfAllWords）
+- #1 两数之和（two-sum）
+- #49 字母异位词分组（group-anagrams）
+- #30 串联所有单词的子串（substring-with-concatenation-of-all-words）
+- #146 LRU 缓存机制（lru-cache）
