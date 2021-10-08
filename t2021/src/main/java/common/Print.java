@@ -33,6 +33,26 @@ public class Print {
         System.out.println(res);
     }
 
+    public static void list(ListNode head, ListNode cycleStart) {
+        StringBuilder res = new StringBuilder();
+        boolean meetCycle = false;
+        while (head != null) {
+            res.append(head.val).append("->");
+            if (head.next != null && head.next == cycleStart) {
+                if (meetCycle) {
+                    res.append(head.next.val).append("(cycle!)");
+                    System.out.println(res);
+                    return;
+                } else {
+                    meetCycle = true;
+                }
+            }
+            head = head.next;
+        }
+        res.append("null");
+        System.out.println(res);
+    }
+
     public static void list(List<List<String>> nestStrs) {
         StringBuilder res = new StringBuilder();
         res.append("[");
