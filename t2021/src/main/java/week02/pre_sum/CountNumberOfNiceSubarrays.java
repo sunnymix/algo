@@ -16,6 +16,17 @@ public class CountNumberOfNiceSubarrays {
     }
 
     public static int numberOfSubarrays(int[] nums, int k) {
-        return -100000;
+        int res = 0;
+        int n = nums.length;
+        int[] s = new int[n + 1]; // 0 ~ n 个位置
+        s[0] = 0;
+        for (int i = 1; i <= n; i++) s[i] = s[i - 1] + nums[i - 1] % 2;
+        int[] count = new int[n + 1]; // 0 ~ n 个位置
+        count[s[0]]++; // s[0] 是一个选项
+        for (int i = 1; i <= n; i++) {
+            if (s[i] - k >= 0) res += count[s[i] - k]; // 等式：s[i] - s[j] = k，所以：s[j] = s[i] - k
+            count[s[i]]++; // s[i] 本身是一个选项
+        }
+        return res;
     }
 }
