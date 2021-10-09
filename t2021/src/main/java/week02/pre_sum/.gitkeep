@@ -3,4 +3,5 @@
 当 Array 中都是非负数时，前缀和数组 Sum 单调递增。
 
 题目：
-1. 统计优美子数组 count-number-of-nice-subarrays。
+1. #1248 统计优美子数组（count-number-of-nice-subarrays）
+2. #53 最大子序和（maximum-subarray）
