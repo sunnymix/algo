@@ -10,17 +10,33 @@ public class Print {
         System.out.println(o);
     }
 
-    public static void array(int[] arr) {
-        StringBuilder res = new StringBuilder();
-        res.append("[");
-        for (int i = 0; i < arr.length; i++) {
-            if (i > 0) {
-                res.append(",");
+    public static void array(int[][] arrOfArr) {
+        StringBuilder s = new StringBuilder();
+        for (int[] arr : arrOfArr) {
+            if (s.length() > 0) {
+                s.append(",");
             }
-            res.append(arr[i]);
+            s.append(_array(arr));
         }
-        res.append("]");
-        System.out.println(res);
+        s.insert(0, "[").append("]");
+        System.out.println(s);
+    }
+
+    public static void array(int[] arr) {
+        System.out.println(_array(arr));
+    }
+
+    static String _array(int[] arr) {
+        StringBuilder s = new StringBuilder();
+        for (int j : arr) {
+            if (s.length() > 0) {
+                s.append(",");
+            }
+            s.append(j);
+        }
+        s.insert(0, "[");
+        s.append("]");
+        return s.toString();
     }
 
     public static void list(ListNode head) {
