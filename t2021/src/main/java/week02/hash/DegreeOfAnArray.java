@@ -15,9 +15,9 @@ public class DegreeOfAnArray {
     }
 
     public static int findShortestSubArray(int[] nums) {
-        Map<Integer, NumStat> map = new HashMap<>();
         int degree = 0, minLength = Integer.MAX_VALUE;
-
+        // 统计数字的：出现次数，开始位置，结束位置
+        Map<Integer, NumStat> map = new HashMap<>();
         for (int idx = 0; idx < nums.length; idx++) {
             int num = nums[idx];
             NumStat stat = map.getOrDefault(num, new NumStat());
@@ -29,6 +29,7 @@ public class DegreeOfAnArray {
             }
             map.put(num, stat);
         }
+        // 枚举统计，更新结果：度数更大；或度数相同但长度更小
         for (Map.Entry<Integer, NumStat> entry : map.entrySet()) {
             NumStat stat = entry.getValue();
             if (stat.count > degree || (stat.count == degree && stat.length() < minLength)) {
