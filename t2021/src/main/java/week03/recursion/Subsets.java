@@ -25,13 +25,17 @@ public class Subsets {
     }
 
     private void _recur(int[] nums, int i) {
+        // 递归边界
         if (i == n) {
             res.add(new ArrayList<>(chosen));
             return;
         }
+        // 不选
         _recur(nums, i + 1);
+        // 选
         chosen.push(nums[i]);
         _recur(nums, i + 1);
+        // 还原现场
         chosen.pop();
     }
 }
