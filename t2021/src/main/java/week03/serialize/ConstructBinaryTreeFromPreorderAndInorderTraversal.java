@@ -24,12 +24,12 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
             return null;
         }
         TreeNode root = new TreeNode(preorder[preLeft]);
-        int mid = inLeft;
-        while (inorder[mid] != root.val) {
-            mid++;
+        int inMid = inLeft;
+        while (inorder[inMid] != root.val) {
+            inMid++;
         }
-        root.left = _build(preLeft + 1, preLeft + (mid - inLeft), inLeft, mid - 1);
-        root.right = _build(preLeft + (mid - inLeft) + 1, preRight, mid + 1, inRight);
+        root.left = _build(preLeft + 1, preLeft + (inMid - inLeft), inLeft, inMid - 1);
+        root.right = _build(preLeft + (inMid - inLeft) + 1, preRight, inMid + 1, inRight);
         return root;
     }
 }
