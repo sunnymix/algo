@@ -11,7 +11,7 @@ import java.util.Queue;
 public class TreeDiameter {
     public int treeDiameter(int[][] edges) {
         this.edges = edges;
-        _initTo();
+        _initToEdges();
         int farthestPoint1 = _findFarthest(0).point;
         return _findFarthest(farthestPoint1).distance;
     }
@@ -20,7 +20,7 @@ public class TreeDiameter {
     private int[][] edges;
     private List<List<Integer>> toEdges;
 
-    private void _initTo() {
+    private void _initToEdges() {
         toEdges = new ArrayList<>();
         for (int[] edge : edges) {
             int x = edge[0];
